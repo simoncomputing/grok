@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Learn Good</title>
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css?family=Proza+Libre|Roboto" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .c {
+            width: 100%;
+            height: 100vh;
+        }
+        
+        .top {
+            height: 15%;
+            position: relative;
+            border-bottom: 3px solid lightgray;
+        }
+        
+        .pad {
+            padding: 14px;
+        }
+        
+        .bottom {
+            height: 85%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .left {
+            position: absolute;
+            left: 0;
+            height: 100%;
+            width: 25%;
+            padding: 8px;
+            overflow: hidden;
+        }
+        
+        .middle {
+            position: absolute;
+            left: calc(25%);
+            height: 100%;
+            width: 45%;
+            padding: 8px;
+            z-index: 100;
+            overflow: hidden;
+            border-left: 3px solid lightgray;
+            border-right: 3px solid lightgray;
+        }
+        
+        .right {
+            position: absolute;
+            left: calc(70%);
+            height: 100%;
+            width: 30%;
+            padding: 8px;
+            overflow: hidden;
+            background-color: black;
+            opacity: 0.8;
+            color: greenyellow;
+            font-family: 'Courier new';
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c">
+        <div class="top">
+            <div class="pad">
+                <h1>TypeScript Tuts</h1>
+                <p>Makc Hasz</p>
+            </div>
+        </div>
+        <div class="bottom" id="bottom">
+            <div class="left" id="left">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Basic Types 
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <h3>Basic Types</h3>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Variable Declarations  
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <ul class=list-group>
+                                <li class=list-group-item>0</li>
+                                <li class=list-group-item>1</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Interfaces
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <ul class=list-group>
+                                <li class=list-group-item>0</li>
+                                <li class=list-group-item>1</li>
+                                <li class=list-group-item>2</li>
+                                <li class=list-group-item>3</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Classes
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <ul class=list-group>
+                                <li class=list-group-item>0</li>
+                                <li class=list-group-item>1</li>
+                                <li class=list-group-item>2</li>
+                                <li class=list-group-item>3</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Functions
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <ul class=list-group>
+                                <li class=list-group-item>0</li>
+                                <li class=list-group-item>1</li>
+                                <li class=list-group-item>2</li>
+                                <li class=list-group-item>3</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    Generics
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <ul class=list-group>
+                                <li class=list-group-item>0</li>
+                                <li class=list-group-item>1</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    Enums
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <h3>Enums</h3>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="middle" class="ui-widget-content" id="middle">
+                <div id="editor" style="height: 100%; width: 100%;">
+                </div>
+                <button class="btn btn-success pull-right" style="margin-top: 8px;" onClick="updatePreview()">Run</button>
+            </div>
+            <div class="right" class="ui-widget-content" id="right">
+
+                <div class="embed-responsive embed-responsive-4by3" style="height: 85vh;">
+                    <iframe class="embed-responsive-item" id="iPreview"></iframe>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script>
+        var size = function (event, ui) {
+            var diff = ui.size.width - ui.originalSize.width;
+
+            if (ui.position.left < ui.originalPosition.left) {
+                $('#left').css('width', ui.originalPosition.left - diff);
+            } else if (ui.position.left > ui.originalPosition.left) {
+                $('#left').css('width', ui.originalPosition.left - diff);
+            } else if (ui.size.width < ui.originalSize.width) {
+                var origRightPos = (ui.originalPosition.left + ui.originalSize.width);
+                var origRightWidth = $('#bottom').width() - origRightPos;
+                $('#right').css('left', origRightPos + diff);
+                $('#right').css('width', origRightWidth - diff);
+            } else if (ui.size.width > ui.originalSize.width) {
+                var origRightPos = (ui.originalPosition.left + ui.originalSize.width);
+                var origRightWidth = $('#bottom').width() - origRightPos;
+                $('#right').css('left', origRightPos + diff);
+                $('#right').css('width', origRightWidth - diff);
+            }
+        };
+
+        $('#middle').resizable({
+            handles: 'e, w',
+            resize: size
+        });
+    </script>
+    <script src="src/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var editor = ace.edit("editor");
+        editor.$blockScrolling = Infinity;
+        editor.setTheme("ace/theme/clouds");
+        editor.getSession().setMode("ace/mode/html");
+        editor.setValue('<!DOCTYPE html>\n<html>\n   <style>\n      #myContainer {\n        width: 400px;\n        height: 400px;\n        position: relative;\n        background: firebrick;\n        border-radius: 25px;\n      }\n      #myAnimation {\n        width: 50px;\n        height: 50px;\n        position: absolute;\n        background-color: white;\n        border-radius: 25px;\n        top: -1px;\n        left: -1px;\n      }\n   <\/style>\n   <!'+'-- Load any external files you like, CSS, JS, etc. --'+'>\n    <link rel=\"stylesheet\" \n    href=\"https:\/\/maxcdn.bootstrapcdn.com\/bootstrap\/3.3.7\/css\/bootstrap.min.css\"> \n    \n   <body>\n      <p>\n         <button class=\"btn btn-default\" onclick=\"myMove()\">Click Me<\/button>\n      <\/p>\n      <div id =\"myContainer\">\n         <div id =\"myAnimation\"><\/div>\n      <\/div>\n      \n      <script>\n         function myMove() {\n           var elem = document.getElementById(\"myAnimation\");\n           var pos = 0;\n           var id = setInterval(frame, 10);\n           function frame() {\n             if (pos == 352) {\n               clearInterval(id);\n             } else {\n               pos++;\n               elem.style.top = pos - 1 + \'px\';\n               elem.style.left = pos - 1 + \'px\';\n             }\n           }\n         }\n      <\/script>\n      \n      <!'+'-- TypeScript works too! --'+'>\n      <script type=\"text\/typescript\">\n            class Hello { \n                name: string; \n                gold: number; \n                \n                wha() { \n                    this.name = \'Mack\'; \n                } \n            } \n            \n            let greeting = new Hello(); \n            greeting.wha(); \n            document.writeln(\'<br><h3>Hello, \' + greeting.name + \'!<\/h3>\');\n      <\/script>\n   <\/body>\n<\/html>', -1);
+    </script>
+    <script src="ts/typescriptServices.js"></script>
+    <script src="ts/transpiler.js"></script>
+    <script>
+        var transpiler = new Transpiler();
+        transpiler.run();
+
+        var updatePreview = function () {
+            var content = editor.getValue();
+            var el = document.createElement('html');
+            el.innerHTML = content;
+            $(el).find('body').append('\n    <script src=\"http://127.0.0.1:51442/ts\/typescriptServices.js\"><\/script>\n    <script src=\"http://127.0.0.1:51442/ts\/transpiler.js\"><\/script>\n    <script>\n        var transpiler = new Transpiler();\n        transpiler.run();\n    <\/script>\n');
+
+            document.getElementById('iPreview').src = "data:text/html;charset=utf-8," + escape(el.innerHTML);
+        }
+
+        updatePreview();
+    </script>
+</body>
+
+</html>
