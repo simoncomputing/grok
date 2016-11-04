@@ -5,6 +5,7 @@ var ch4 = 'class Drink {\n\n\tpublic full: boolean;\n\t\n\tconstructor() {\n\t  
 var ch5  = 'class Generic<T> {\n    value : T;\n    setValue(value : T) {\n        this.value = value;\n    }\n    getValue() : T {\n        return this.value;\n    }\n}\n\nvar str = new Generic<string>();\nstr.setValue(\"Hello World\");\nconsole.log(str.getValue());\n\nvar num = new Generic<number>();\nnum.setValue(1);\nconsole.log(num.getValue());\n\nvar boo = new Generic<boolean>();\nboo.setValue(true);\nconsole.log(boo.getValue());\n';
 var ch6 = '\/\/ specify return type\nfunction hello():string {       \n    return \'hello\';\n}\n\nlet numStuff:number = hello();  \/\/ error\nlet greeting:string = hello();  \/\/ OK\n\n\/\/ specify param types\nfunction annoy(say: string, repeat: number ) { \n    for (let i = 0; i < repeat; i++) {\n        console.log(say);\n    }   \n}\n\nannoy(\'Hay!\', 10);      \/\/ OK\nannoy(\'Hay!\', true);    \/\/ Error\n\n\/\/ specify optional params\nfunction jump( height:number, name?:string ) {\n    if (name) {\n        console.log(name + \' jumped \' + height + \' feet\');\n    } else {\n        console.log(\'You jumped \' + height + \' feet\');\n    }\n}\n\njump(10);               \/\/ OK\njump(100, \'Jack\');      \/\/ OK';
 var ch7 = 'const enum Colors {\n    Red,\n    Green,\n    Blue,\n    Rainbow = 100\n}\n\nvar colors = [Colors.Red, Colors.Green, Colors.Blue, Colors.Rainbow];\nvar numbers =  [0 \/* Red *\/, 1 \/* Green *\/, 2 \/* Blue *\/, 100 \/* Rainbow *\/];\n\nconsole.log(colors);\nconsole.log(numbers);\n\n\/\/ can return name of enum from value \nenum Enum {\n    A\n}\nlet a = Enum.A;\nlet nameOfA = Enum[Enum.A]; \/\/ \"A\"\n\nconsole.log(a);\nconsole.log(nameOfA);';
+var ch8 = '\/\/ Expression bodies\nvar evens = [2, 4, 6, 8];\nvar odds = evens.map(v => v + 1);\nvar nums = evens.map((v, i) => v + i);\nvar pairs = evens.map(v => ({even: v, odd: v + 1}));\n\nvar fives = [];\n\n\/\/ Statement bodies\nnums.forEach(v => {\n  if (v % 5 === 0) {\n    fives.push(v);\n  }\n});\n\n\/\/ Lexical this\nvar bob = {\n  _name: \"Bob\",\n  _friends: [\"Jo\", \"Mark\", \"Harry\"],\n  printFriends() {\n    this._friends.forEach(f =>\n      \/\/ \'this\' refers to bob\n      console.log(this._name + \" knows \" + f));\n  },\n  badPrintFriends() {\n    this._friends.forEach(function(f) {\n        \/\/ \'this\' refers to global object window\n      console.log(this._name + \" knows \" + f);\n    });\n  }\n}\n\nbob.printFriends();\nbob.badPrintFriends();\n\nconsole.log(\"Evens: \" + evens);\nconsole.log(\"Odds: \" + odds);\nconsole.log(\"Nums: \" + nums);\n\nconsole.log(\"Pairs:\" )\n\nfor (let i = 0; i < pairs.length; i++ ) {\n    console.log(pairs[i].even + \", \" + pairs[i].odd);\n}\n\nconsole.log(\"Fives:\" + fives);\n\n\/\/ parameters\n\nfunction f (x, y = 7, z = 42) {\n    return x + y + z\n}\n\nfunction g(x, y, ...a) {\n    return (x + y) * a.length\n}\n\nfunction h(x, y, z) {\n  return x + y + z;\n}\n\nconsole.log(f(1));                          \/\/ 50\nconsole.log(g(1, 2, \"hello\", true, 7));     \/\/ 9\nconsole.log(h(...[1,2,3]));                 \/\/ 6\n\n\n\n\n\n\n';
 
 $('#ch0').click(function () {
 	editor.setValue(ch0, 1);
@@ -36,4 +37,8 @@ $('#ch6').click(function () {
 
 $('#ch7').click(function () {
 	editor.setValue(ch7, 1);
+});
+
+$('#ch8').click(function () {
+	editor.setValue(ch8, 1);
 });

@@ -146,7 +146,9 @@ function transpileModule(input, options) {
             let message = ts.flattenDiagnosticMessageText(diagnostic.messageText, '\n');
 
             if (!message.includes('console') && !message.includes('NaN') && !message.includes('document') &&
-                !message.includes('Array')) {
+                !message.includes('Array') && !message.includes('map') && !message.includes('push') && 
+                !message.includes('A rest parameter') && !message.includes('\'length\' does not exist on type \'{') 
+                && !message.includes('}\' is not an array type') && !message.includes('do not match any signature') ) {
                 var anno = {
                     row: line,
                     column: character,
