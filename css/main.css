@@ -50,7 +50,7 @@ code {
     position: absolute;
     left: 0;
     height: 100%;
-    width: 25%;
+    width: 20%;
     overflow-x: hidden;
     overflow-y: scroll;
     background-color: rgba(239,239,239,1);
@@ -79,9 +79,9 @@ code {
 
 .middle {
     position: absolute;
-    left: calc(25%);
+    left: calc(20%);
     height: 100%;
-    width: 45%;
+    width: 50%;
     z-index: 100;
     overflow: hidden;
 }
