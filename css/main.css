@@ -92,7 +92,7 @@ code {
 }
 
 .ui-resizable-e:hover, .ui-resizable-w:hover {
-    background: steelblue;
+    background: #FFC300;
 }
 
 #editor {
@@ -117,7 +117,7 @@ code {
     overflow-x: hidden;
     overflow-y: scroll;
     background-color: black;
-    color: yellow;
+    color: #FFC300;
     font-family: 'Courier new';
 }
 
