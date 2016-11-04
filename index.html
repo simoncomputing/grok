@@ -200,7 +200,16 @@ let words: string = `${ name } has ${ numDogs } dalmatians.`
                      <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
                         <div class="panel-body">
                            <button id="ch5" class="btn btn-default btn-block btn-primary" style="margin-bottom: 8px;">Load code for this chapter in the editor</button>
-                           <p>They are what you think they are...</p>
+                           <p>Generics behave as how you expect they would.</p>
+                           <pre><code class="ts">class Generic<T> {
+    value : T;
+    setValue(value : T) {
+        this.value = value;
+    }
+    getValue() : T {
+        return this.value;
+    }
+} </code></pre>
                         </div>
                      </div>
                   </div>
@@ -232,6 +241,12 @@ let words: string = `${ name } has ${ numDogs } dalmatians.`
                         <div class="panel-body">
                            <button id="ch7" class="btn btn-default btn-block btn-primary" style="margin-bottom: 8px;">Load code for this chapter in the editor</button>
                            <p>Last, but not least.</p>
+                           <pre><code class="ts">const enum Colors {
+    Red,
+    Green,
+    Blue,
+    Rainbow = 100
+} </code></pre>
                         </div>
                      </div>
                   </div>
