@@ -24,17 +24,14 @@ var blinker = setInterval(function() {
 /* override console functions for when the user's program is run, redirect to the fake console */
 
 console.log = function(str) {
-    $('#console').append(str + '<br>')
-    $("#right").animate({
-        scrollTop: $('#right').prop("scrollHeight")
-    }, 1000);
+    $('#console').append(str + '<br>');
+    var objDiv = document.getElementById("right");
+    objDiv.scrollTop = objDiv.scrollHeight;
+
 };
 
 console.error = function(str) {
     $('#console').append('<span class="err">' + str + '</span><br>')
-    $("#right").animate({
-        scrollTop: $('#right').prop("scrollHeight")
-    }, 1000);
 };
 
 /* jQuery resizing function */
@@ -77,10 +74,11 @@ var trigger = function(event) {
 
     try {
         eval(output);
+        var rightDiv = document.getElementById("right");
+        rightDiv.scrollTop = rightDiv.scrollHeight;
     } catch (e) {
         console.error(e);
     }
-
 };
 
 /* taken from typescript playground */
@@ -185,6 +183,7 @@ $(document).keydown(function(event) {
 /* clear console on click */
 
 $('#right').click(function(event) {
+    $('#hilarious').text('');
     $('#console').text('');
 });
 

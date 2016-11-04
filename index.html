@@ -12,14 +12,14 @@
    <body>
       <div class="c">
          <div class="top">
-            <div class="container pad">
+            <!-- <div class="container pad">
                <div class="pull-right col-md-4 quote" id="quoteContainer">
                   <p></p>
                   <p id="quoteGenius"></p>
                </div>
                <h1>Learn TypeScript Good</h1>
                <a href="http://www.simoncomputing.com" style="">SimonComputing.com</a>
-            </div>
+            </div> -->
          </div>
          <div class="bottom" id="bottom">
             <div class="left" id="left">
@@ -78,6 +78,11 @@
                               <li>Void</li>
                            </ul>
                            <p>You can define your own types too, but we'll get more into that later.</p>
+                           <p>One thing special to TypeScript are template strings, which can span multiple lines and have embedded expressions. These strings are surrounded by the backtick/backquote (`) character, and embedded expressions are of the form ${ expr }</p>
+                           <pre><code class="ts">var name: string = `Mack`;
+let numDogs: number = 101;
+let words: string = `${ name } has ${ numDogs } dalmatians.`
+</code></pre>
                         </div>
                      </div>
                   </div>
@@ -160,6 +165,24 @@
 
                         <pre><code class="ts">constructor() { } </code></pre>
 
+                        <p>Additionaly, if you declare a variable in the constructor, TypeScript will automatically save it as a class variable. Take a look at the following code to see what I mean.
+
+                        <pre><code class="ts">class Person {
+    constructor(public name, 
+               private gold) {  }
+}</code></pre>
+
+                        <p>That TypeScript compiles into the following JavaScript</p>
+
+                        <pre><code class="js">var Person = (function () {
+    function Person(name, gold) {
+        this.name = name;
+        this.gold = gold;
+    }
+    return Person;
+}());
+</code></pre>
+                        <p>You can see how the two variables, just declared in the constructor, are automatically assigned to the object.</p>
                         <p>Load up the code for this chapter and dive right into it. </p>
                         </div>
                      </div>
@@ -214,17 +237,19 @@
             </div>
             <div class="middle" class="ui-widget-content" id="middle">
                <button class="btn btn-warning" id="run">
-               <span class="glyphicon glyphicon-play"></span>
-               Run</button>
+                  <span class="glyphicon glyphicon-play"></span> Run
+               </button>
                <div id="editor">
                </div>
             </div>
             <div class="right" class="ui-widget-content" id="right">
-               <p>> learn_ts_good start</p>
-               <p>initializing reincarnation sequence...</p>
-               <p>destroying all humans...</p>
-               <p>running unit tests because they err umm totally exist...</p>
-               <p>done.</p>
+               <div id="hilarious">
+                  <p>> learn_ts_good start</p>
+                  <p>initializing reincarnation sequence...</p>
+                  <p>destroying all humans...</p>
+                  <p>running unit tests because they err umm totally exist...</p>
+                  <p>done.</p>
+               </div>
                <p id="console"></p>
                <p id="prompt">> _</p>
             </div>
