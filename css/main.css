@@ -8,15 +8,19 @@ body {
 }
 
 .top {
-    height: 7%;
+    height: 8%;
     position: relative;
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fb9d23+0,ffc578+100 */
-background: rgb(251,157,35); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(251,157,35,1) 0%, rgba(255,197,120,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  rgba(251,157,35,1) 0%,rgba(255,197,120,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  rgba(251,157,35,1) 0%,rgba(255,197,120,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb9d23', endColorstr='#ffc578',GradientType=0 ); /* IE6-9 */
+    color: white;
+    background: rgb(0,84,130); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(0,84,130,1) 0%, rgba(19,24,96,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,84,130,1) 0%,rgba(19,24,96,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,84,130,1) 0%,rgba(19,24,96,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005482', endColorstr='#131860',GradientType=0 ); /* IE6-9 */
+}
 
+.top h3 {
+    display: inline-table;
+    margin-top: 20px;
 }
 
 code {
@@ -37,7 +41,7 @@ code {
 }
 
 .bottom {
-    height: 93%;
+    height: 92%;
     position: relative;
     overflow: hidden;
 }
@@ -47,9 +51,30 @@ code {
     left: 0;
     height: 100%;
     width: 25%;
-    padding: 8px;
     overflow-x: hidden;
     overflow-y: scroll;
+    background-color: rgba(239,239,239,1);
+}
+
+.panel-heading {
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(252,252,252,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(252,252,252,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(252,252,252,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fcfcfc',GradientType=0 );
+}
+
+.panel-group .panel+.panel {
+    margin-top: 0;
+}
+
+.panel {
+    border-color: rgba(0, 0, 0, 0); !important;
+}
+
+.panel-group .panel {
+    border-radius: 0;
+    margin-top: 0;
 }
 
 .middle {
