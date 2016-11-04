@@ -117,8 +117,7 @@ code {
     overflow-x: hidden;
     overflow-y: scroll;
     background-color: black;
-    opacity: 0.8;
-    color: greenyellow;
+    color: yellow;
     font-family: 'Courier new';
 }
 
