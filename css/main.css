@@ -116,8 +116,8 @@ code {
     padding: 8px;
     overflow-x: hidden;
     overflow-y: scroll;
-    background-color: black;
-    color: greenyellow;
+    background-color: #272822;
+    color: yellow;
     font-family: 'Courier new';
 }
 
