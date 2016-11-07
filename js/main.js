@@ -196,10 +196,10 @@ $('.ui-resizable-w').click(function() {
         $(this).removeClass('noclick');
     } else {
         if ($('#middle').position().left == 0) {
-            $('#left').css('width', '22%');
+            $('#left').css('width', '25%');
             var newWidth = $('#middle').width() - $('#left').width();
 
-            $('#middle').css('left', '22%');
+            $('#middle').css('left', '25%');
             $('#middle').css('width', newWidth);
         } else {
             var newWidth = $('#middle').position().left + $('#middle').width();

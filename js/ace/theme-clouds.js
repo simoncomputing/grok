@@ -11,7 +11,7 @@ width: 1px;\
 background: #e8e8e8\
 }\
 .ace-clouds {\
-background-color: #FFFFFF;\
+background-color: #FFFBD1;\
 color: #000000\
 }\
 .ace-clouds .ace_cursor {\
@@ -31,7 +31,7 @@ margin: -1px 0 0 -1px;\
 border: 1px solid #BFBFBF\
 }\
 .ace-clouds .ace_marker-layer .ace_active-line {\
-background: #FFFBD1\
+background: white\
 }\
 .ace-clouds .ace_gutter-active-line {\
 background-color : #dcdcdc\

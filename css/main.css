@@ -8,7 +8,7 @@ body {
 }
 
 .top {
-    height: 8%;
+    height: 9%;
     position: relative;
     color: white;
     background: rgb(0,84,130); /* Old browsers */
@@ -41,7 +41,7 @@ code {
 }
 
 .bottom {
-    height: 92%;
+    height: 91%;
     position: relative;
     overflow: hidden;
 }
@@ -50,7 +50,7 @@ code {
     position: absolute;
     left: 0;
     height: 100%;
-    width: 22%;
+    width: 25%;
     overflow-x: hidden;
     overflow-y: scroll;
     background-color: rgba(239,239,239,1);
@@ -79,9 +79,9 @@ code {
 
 .middle {
     position: absolute;
-    left: calc(22%);
+    left: calc(25%);
     height: 100%;
-    width: 48%;
+    width: 45%;
     z-index: 100;
     overflow: hidden;
 }
@@ -117,7 +117,7 @@ code {
     overflow-x: hidden;
     overflow-y: scroll;
     background-color: black;
-    color: #FFC300;
+    color: greenyellow;
     font-family: 'Courier new';
 }
 
