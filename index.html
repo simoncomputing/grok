@@ -7,16 +7,16 @@
       <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
       <link href="https://fonts.googleapis.com/css?family=Proza+Libre|Roboto" rel="stylesheet">
       <link rel="stylesheet" href="css/main.css">
-      <link rel="stylesheet" href="js/highlight/styles/tomorrow.css">
+      <link rel="stylesheet" href="js/lib/highlight/styles/tomorrow.css">
+      <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+
    </head>
    <body>
       <div class="c">
          <div class="top">
-            <div class="container-fluid">
-               <a href="http://www.simoncomputing.com" style="color: white;">
-                <img src="img/logo.png" style="width: 44px; height: 44px; margin-top: -10px">
-                <h3>SimonComputing</h3>
-               </a>
+            <div class="container-fluid" style="text-align: center;">
+                <h1 style="font-family: 'Baloo', cursive; ">Grok</h1>
+                <h5>Powered by SimonComputing</h5>
             </div>
          </div>
          <div class="bottom" id="bottom">
@@ -30,7 +30,7 @@
                            </a>
                         </h4>
                      </div>
-                     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                     <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                         <div class="panel-body">
                            <p>This tutorial is interactive and you will be able to edit and compile TypeScript code write here in the browser.</p>
                            <p>You can run your code by hitting the run button in the top tight of the editor or you can hit 'Ctrl-Enter' or on Mac 'Cmd-Enter'.</p>
@@ -339,7 +339,7 @@ f(...[1,2,3]) == 6
       <!-- quote gen -->
       <script src="js/app/inspiration.js"></script>
       <!-- syntax highlighting outside ace editor -->
-      <script src="js/app/highlight/highlight.pack.js"></script>
+      <script src="js/lib/highlight/highlight.pack.js"></script>
       <script>hljs.initHighlightingOnLoad();</script>
    </body>
 </html>

@@ -8,7 +8,7 @@ body {
 }
 
 .top {
-    height: 9%;
+    height: 100px;
     position: relative;
     color: white;
     background: rgb(0,84,130); /* Old browsers */
@@ -16,11 +16,6 @@ body {
     background: -webkit-linear-gradient(top,  rgba(0,84,130,1) 0%,rgba(19,24,96,1) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom,  rgba(0,84,130,1) 0%,rgba(19,24,96,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005482', endColorstr='#131860',GradientType=0 ); /* IE6-9 */
-}
-
-.top h3 {
-    display: inline-table;
-    margin-top: 20px;
 }
 
 code {
@@ -41,7 +36,7 @@ code {
 }
 
 .bottom {
-    height: 91%;
+    height: calc(100% - 100px);
     position: relative;
     overflow: hidden;
 }
@@ -117,7 +112,7 @@ code {
     overflow-x: hidden;
     overflow-y: scroll;
     background-color: #272822;
-    color: yellow;
+    color: greenyellow;
     font-family: 'Courier new';
 }
 
