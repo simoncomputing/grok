@@ -88,6 +88,7 @@ code {
 
 .ui-resizable-e:hover, .ui-resizable-w:hover {
     background: #FFC300;
+    cursor: col-resize
 }
 
 #editor {
