@@ -14,7 +14,7 @@ svg {
 }
 
 .big {
-    font-family: 'Baloo';
+    font-family: 'Baloo', sans;
     color: white;
     padding: 0px;
     padding-left: 150px;
@@ -29,7 +29,6 @@ svg {
     padding-left: 150px;
     font-size: 18px;
     margin-top: 0px;
-    font-family: 'Baloo', sans-serif;
 }
 
 .card {
@@ -43,7 +42,7 @@ svg {
     float: left;
     margin-bottom: 24px;
     min-width: 216px;
-    height: 195px;
+    height: 210px;
     padding-bottom: 24px;
     position: relative;
     -webkit-transition: box-shadow .5s;
@@ -54,6 +53,22 @@ svg {
     border: 2px solid #2196F3;
     box-shadow: 0 8px 8px rgba(0,0,0,0.24),0 0 8px rgba(0,0,0,0.12);
     text-decoration: none;
+}
+
+.card.disabled {
+    cursor: not-allowed;
+}
+
+.card.disabled:hover {
+    cursor: not-allowed;
+    border: 2px solid firebrick;
+    box-shadow: 0 8px 8px rgba(0,0,0,0.24),0 0 8px rgba(0,0,0,0.12);
+    text-decoration: none;
+}
+
+.card.disabled:hover h2 {
+    color: firebrick;
+    padding: 14px 14px 0 14px;
 }
 
 /*.card header {
@@ -99,7 +114,7 @@ svg {
   color: #607D8B;
   line-height: 32px;
   font-size: 18px;
-  padding-bottom: 24px;
+  padding-bottom: 12px;
 }
 
 .cards {
