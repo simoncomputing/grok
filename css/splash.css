@@ -1,7 +1,7 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Martel', serif;
     color: white;
-    background-color: rgba(236, 239, 241, 0.239216);
+    background-color: steelblue;
 }
 
 svg {
@@ -9,6 +9,7 @@ svg {
   position: absolute;
   top: 0;
   left: 0;
+  background-color: rgba(236, 239, 241, 1.0);
   z-index: -1;
 }
 
@@ -98,7 +99,6 @@ svg {
   color: #607D8B;
   line-height: 32px;
   font-size: 18px;
-  font-family: 'Roboto', sans-serif;
   padding-bottom: 24px;
 }
 
@@ -108,7 +108,6 @@ svg {
 }
 
 ul.nav-top {
-    font-family: 'Roboto', sans-serif;
     list-style-type: none;
     margin: 0;
     padding: 0;
