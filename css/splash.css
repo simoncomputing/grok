@@ -119,13 +119,13 @@ ul.nav-top li {
     float: right;
     margin: 12px;
     border-radius: 4px;
-    background-color: orange;
+    background-color: white;
 
 }
 
 ul.nav-top li a {
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 8px 12px;
     text-decoration: none;
@@ -134,12 +134,12 @@ ul.nav-top li a {
 ul.nav-top li a:hover {
     text-decoration: none;
     border-radius: 4px;
-    background-color: lightsteelblue;
+    background-color: lightgray;
 }
 
 .droplet0 {
     position: absolute;
-    top: calc(1050px - 400px);
+    top: calc(1050px - 350px);
     left: 14%;
     background-color: lightblue;
     width: 75px;
@@ -153,7 +153,7 @@ ul.nav-top li a:hover {
 
 .droplet1 {
     position: absolute;
-    top: calc(1300px - 400px);
+    top: calc(1300px - 350px);
     left: 55px;
     background-color: lightblue;
     width: 75px;
@@ -167,7 +167,7 @@ ul.nav-top li a:hover {
 
 .droplet2 {
     position: absolute;
-    top: calc(1100px - 400px);
+    top: calc(1100px - 350px);
     left: 45%;
     background-color: lightblue;
     width: 75px;
@@ -181,7 +181,7 @@ ul.nav-top li a:hover {
 
 .droplet3 {
     position: absolute;
-    top: calc(1400px - 400px);
+    top: calc(1400px - 350px);
     left: 30%;
     background-color: lightblue;
     width: 75px;
@@ -195,7 +195,7 @@ ul.nav-top li a:hover {
 
 .droplet4 {
     position: absolute;
-    top: calc(1200px - 400px);
+    top: calc(1200px - 350px);
     left: 75%;
     background-color: lightblue;
     width: 75px;
@@ -209,7 +209,7 @@ ul.nav-top li a:hover {
 
 .droplet5 {
     position: absolute;
-    top: calc(1500px - 400px);
+    top: calc(1500px - 350px);
     left: 90%;
     background-color: lightblue;
     width: 75px;
@@ -223,7 +223,7 @@ ul.nav-top li a:hover {
 
 .droplet6 {
     position: absolute;
-    top: calc(1000px - 400px);
+    top: calc(1000px - 350px);
     left: 85%;
     background-color: lightblue;
     width: 75px;
@@ -237,7 +237,7 @@ ul.nav-top li a:hover {
 
 .droplet7 {
     position: absolute;
-    top: calc(1600px - 400px);
+    top: calc(1600px - 350px);
     left: 10%;
     background-color: lightblue;
     width: 75px;
@@ -251,7 +251,7 @@ ul.nav-top li a:hover {
 
 .droplet8 {
     position: absolute;
-    top: calc(1660px - 400px);
+    top: calc(1660px - 350px);
     left: 60%;
     background-color: lightblue;
     width: 75px;
