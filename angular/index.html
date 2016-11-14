@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>SimonComputing | Grok.Angular()</title>
+      <link rel="stylesheet" href="../css/normalize.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      <link href="https://fonts.googleapis.com/css?family=Proza+Libre|Roboto" rel="stylesheet">
+      <link rel="stylesheet" href="./grok-angular.css">
+      <link rel="stylesheet" href="../js/lib/highlight/styles/tomorrow.css">
+      <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+   </head>
+   <body>
+      <div class="c">
+         <div class="top">
+            <div class="container-fluid" style="text-align: center;">
+                <a class="home-ico pull-left" href="/">
+                  <span class="glyphicon glyphicon-home" style="width: 44px; height: 44px;"></span>
+                </a>
+                <a href="http://SimonComputing.com">
+                  <img class="img img-logo pull-right" src="../img/sc-logo-white.png">
+                </a>
+                <h1><span style="font-family: 'Baloo', cursive; ">Grok</span><span style="font-family: 'Inconsolata', monospace; ">.Angular()</span></h1>
+            </div>
+         </div>
+         <div class="bottom" id="bottom">
+            <div class="left" id="left">
+
+
+
+
+            </div>
+            <div class="middle" class="ui-widget-content" id="middle">
+               <button class="btn btn-warning" id="run">
+                  <span class="glyphicon glyphicon-play"></span> Run
+               </button>
+               <div id="editor">
+               </div>
+            </div>
+            <div class="right" class="ui-widget-content" id="right" style="background-color: white;">
+              <div class="embed-responsive embed-responsive-16by9" style="width: 100%; height: 100%">
+                <iframe class="embed-responsive-item" id="iPreview" ></iframe>
+              </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- jquery -->
+      <script src="../js/lib/jquery-3.1.1.min.js"></script>
+      <script src="../js/lib/jquery-ui.js"></script>
+      <!-- bootstrap -->
+      <script src="../js/lib/bootstrap.min.js"></script>
+      <!-- ace editor -->
+      <script src="../js/ace/ace.js"></script>
+      <!-- ts compiler -->
+      <script src="../ts/typescript.js"></script>
+      <!-- app js -->
+      <script src="../js/app/main.js"></script>
+      <!-- code samples -->
+      <script src="../js/app/samples.js"></script>
+      <!-- quote gen -->
+      <script src="../js/app/inspiration.js"></script>
+      <!-- syntax highlighting outside ace editor -->
+      <script src="../js/lib/highlight/highlight.pack.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script>
+            <script type="text/javascript">
+        
+var myVariable = '<!DOCTYPE html>\n<html>\n    <script src=\"https:\/\/unpkg.com\/core-js\/client\/shim.min.js\"><\/script>\n\n    <script src=\"https:\/\/unpkg.com\/zone.js@0.6.25?main=browser\"><\/script>\n    <script src=\"https:\/\/unpkg.com\/reflect-metadata@0.1.3\"><\/script>\n    <script src=\"https:\/\/unpkg.com\/systemjs@0.19.27\/dist\/system.src.js\"><\/script>\n\n   <style>\n      #myContainer {\n        width: 400px;\n        height: 400px;\n        position: relative;\n        background: firebrick;\n        border-radius: 25px;\n      }\n      #myAnimation {\n        width: 50px;\n        height: 50px;\n        position: absolute;\n        background-color: white;\n        border-radius: 25px;\n        top: -1px;\n        left: -1px;\n      }\n   <\/style>\n   <!'+'-- Load any external files you like, CSS, JS, etc. --'+'>\n    <link rel=\"stylesheet\" \n    href=\"https:\/\/maxcdn.bootstrapcdn.com\/bootstrap\/3.3.7\/css\/bootstrap.min.css\"> \n    \n   <body>\n      <p>\n         <button class=\"btn btn-default\" onclick=\"myMove()\">Click Me<\/button>\n      <\/p>\n      <div id =\"myContainer\">\n         <div id =\"myAnimation\"><\/div>\n      <\/div>\n      \n      <script>\n         function myMove() {\n           var elem = document.getElementById(\"myAnimation\");\n           var pos = 0;\n           var id = setInterval(frame, 10);\n           function frame() {\n             if (pos == 352) {\n               clearInterval(id);\n             } else {\n               pos++;\n               elem.style.top = pos - 1 + \'px\';\n               elem.style.left = pos - 1 + \'px\';\n             }\n           }\n         }\n      <\/script>\n      \n      <!'+'-- TypeScript works too! --'+'>\n      <script type=\"text\/typescript\">\n            class Hello { \n                name: string; \n                gold: number; \n                \n                wha() { \n                    this.name = \'Mack\'; \n                } \n            } \n            \n            let greeting = new Hello(); \n            greeting.wha(); \n            document.writeln(\'<br><h3>Hello, \' + greeting.name + \'!<\/h3>\');\n      <\/script>\n   <\/body>\n<\/html>';
+
+        editor.setValue(myVariable, -1);
+
+
+            var content = editor.getValue();
+             var el = document.createElement('html');
+             el.innerHTML = content;
+
+          document.getElementById('iPreview').src = "data:text/html;charset=utf-8," + escape(el.innerHTML);
+
+
+      </script>
+   </body>
+</html>
