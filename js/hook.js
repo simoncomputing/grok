@@ -1,3 +1,6 @@
+/*
+http://stackoverflow.com/questions/16959359/intercept-xmlhttprequest-and-modify-responsetext
+*/
 
 var rawOpen = XMLHttpRequest.prototype.open;
 
