@@ -21,7 +21,7 @@ $(document).keydown(function(event) {
 
 /* !! compile TypeScript !! */
 
-var trigger = function(event) {
+function trigger(event) {
 
     $('#console').append('> exec <br>');
 
