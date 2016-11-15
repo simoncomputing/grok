@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>SimonComputing | Grok.TypeScript()</title>
+      <link rel="stylesheet" href="../css/normalize.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      <link href="https://fonts.googleapis.com/css?family=Proza+Libre|Roboto" rel="stylesheet">
+      <link rel="stylesheet" href="../css/app.css">
+      <link rel="stylesheet" href="../js/lib/highlight/styles/tomorrow.css">
+      <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+   </head>
+   <body>
+      <div class="c">
+         <div class="top">
+            <div class="container-fluid" style="text-align: center;">
+               <a class="home-ico pull-left" href="/">
+               <span class="glyphicon glyphicon-home" style="width: 44px; height: 44px;"></span>
+               </a>
+               <a href="http://SimonComputing.com">
+               <img class="img img-logo pull-right" src="../img/sc-logo-white.png">
+               </a>
+               <h1><span style="font-family: 'Baloo', cursive; ">Grok</span><span style="font-family: 'Inconsolata', monospace; ">.JavaScript()</span></h1>
+            </div>
+         </div>
+         <div class="bottom" id="bottom">
+            <div class="left" id="left">
+               <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                           <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                           Overview
+                           </a>
+                        </h4>
+                     </div>
+                     <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                           <p>Javascript is one of the world’s most popular programming languages. In the early days of the web, the language was used to create simple scripts that did handy things, like check to make sure you filled out all the “required” fields on a form before you hit submit. But as Internet connections got faster and browsers got more sophisticated, Javascript evolved into a tool for building all sorts of complex web-based apps. Some, like Google Docs, even rival desktop apps in size and functionality.</p>
+                           <p>Javascript is a high-level, dynamic, untyped, and interpreted programming language. JavaScript can be an eloquent language if written the right way, but in the hand’s of a bad programmer, JavaScript can be ugly and error prone. This tutorial will not only teach you the syntax and semantics of the language, but also instill proper coding principles. </p>
+                           <p>This tutorial assumes that you have prior object oriented programming experience in a language such as Java, C++, etc.</p>
+                           <button id="ch0" class="btn btn-default btn-block btn-primary" style="margin-bottom: 8px;">Load code covering all JS features</button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                           <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                           Vars  
+                           </a>
+                        </h4>
+                     </div>
+                     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                           <button id="ch1" class="btn btn-default btn-block btn-primary" style="margin-bottom: 8px;">Load code for this chapter in the editor</button>
+                           <p>Variables, the core of all programming languages, are where we will begin. Traditionally the programmer must declare the type of variable, but in JavaScript this is not the case. JavaScript is a weakly typed language; i.e. the type is inferred. It is also dynamically typed, so a variable’s type can change.</p>
+<pre><code class="js">var juan = 1;
+juan = "one";
+juan = [];
+juan = { };
+juan = true;</code></pre>
+                           <p>These are all legal expressions. In JavaScript you can change a variables type on the fly no questions asked. This is obviously to be avoided, as it leaves future code maintainers scratching their heads wondering what you were thinking. </p>
+                           <p>The basic types are as follows:</p>
+                           <ul>
+                              <li>Number</li>
+                              <li>String</li>
+                              <li>Boolean</li>
+                              <li>Function</li>
+                              <li>Object</li>
+                              <li>Symbol (new in ES6)</li>
+                           </ul>
+                           ... oh, and undefined and null, which are ... slightly odd. And Array, which is a special kind of object. And Date and RegExp, which are objects that you get for free. And to be technically accurate, functions are just a special type of object. So the type diagram looks more like this:
+                           <ul>
+                              <li>Number</li>
+                              <li>String</li>
+                              <li>Boolean</li>
+                              <li>Symbol (new in ES6)</li>
+                              <li>Object</li>
+                              <ul>
+                                 <li>Function</li>
+                                 <li>Array</li>
+                                 <li>Date</li>
+                                 <li>RegExp</li>
+                              </ul>
+                              <li>null</li>
+                              <li>undefined</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                           <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                           Functions
+                           </a>
+                        </h4>
+                     </div>
+                     <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                           <button id="ch2" class="btn btn-default btn-block btn-primary" style="margin-bottom: 8px;">Load code for this chapter in the editor</button>
+                           <p>In JavaScript, functions are first-class objects, because they can have properties and methods just like any other object. What distinguishes them from other objects is that functions can be called. Functions can get pretty tricky. For now we will go over the fundamentals and cover more advanced topics later. </p>
+                           <p>Functions can be defined one of two ways</p>
+<pre><code class="js">var doSomething = function() {
+  . . . 
+}
+
+/* is the same as */
+
+function doSomething() {
+  . . . 
+}</code></pre>
+                        </div>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="headingFour">
+                        <h4 class="panel-title">
+                           <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                           Objects
+                           </a>
+                        </h4>
+                     </div>
+                     <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                        <div class="panel-body">
+                           <button id="ch3" class="btn btn-default btn-block btn-primary" style="margin-bottom: 8px;">Load code for this chapter in the editor</button>
+                           <p>Think of an object as a collection of things. For example, imagine you have a ship. That ship is your object and contains a collection of other things. We’ll call these “properties”. The ship’s properties might contain the year it was built, the name of the ships captain, the number of passengers aboard, etc.  Functions and other objects and be properties as well.</p>
+                           <p>Taken from the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects">MDN</a>:</p>
+                           <blockquote>JavaScript is designed on a simple object-based paradigm. An object is a collection of properties, and a property is an association between a name and a value. A property's value can be a function, in which case the property is known as a method. In addition to objects that are predefined in the browser, you can define your own objects.</blockquote>
+                           <p>You can define an object using literal syntax like this:</p>
+<pre><code class="js">var titanic = {
+  maidenVoyage: 1912,
+  numberOfPassengers: 1317,
+  captain: {
+    name: "Edward John Smith"
+  },
+  sendSOS: function() {
+    console.log("SAVE OUR SHIP")
+  }
+}</code></pre>
+                           <p>You can access those properties like this:</p>
+<pre><code class="js">titanic.maidenVoyage // 1912
+titanic["numberOfPassengers"] // 1317
+</code></pre>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="headingFive">
+                        <h4 class="panel-title">
+                           <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                           Arrays
+                           </a>
+                        </h4>
+                     </div>
+                     <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                        <div class="panel-body">
+                           <button id="ch4" class="btn btn-default btn-block btn-primary" style="margin-bottom: 8px;">Load code for this chapter in the editor</button>
+                           <p>Arrays are a little different then they are in Java and C++. Arrays in JavaScript can grow and shrink and there are many helper methods provided for you. Take a look at the following code snippet for a quick example.</p>
+                           <pre><code class="js">var bag = ["cola", "sandwich", "cake"] </code></pre>
+                           <p>Don’t forget, JavaScript is weakly typed, so the following is legal code. </p>
+                           <pre><code class="js">var trash = ["garbage", 10, true, { name: "Jack", hours: 24 } ] </code></pre>
+                           <p>The forEach method is extremely helpful for iterating through an array.</p>
+<pre><code class="js">bag.forEach(function(item){
+    console.log(("i love " + item).toUpperCase());
+});</code></pre>          
+                           <p>or even</p>
+<pre><code class="js">function yell(item) {
+    console.log(("i love " + item).toUpperCase()); 
+}
+
+bag.forEach(yell);</code></pre> 
+                        </div>
+                     </div>
+                  </div>
+                  <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="headingSix">
+                        <h4 class="panel-title">
+                           <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                           Closures
+                           </a>
+                        </h4>
+                     </div>
+                     <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                        <div class="panel-body">
+                           <button id="ch5" class="btn btn-default btn-block btn-primary" style="margin-bottom: 8px;">Load code for this chapter in the editor</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="middle" class="ui-widget-content" id="middle">
+               <button class="btn btn-warning" id="run">
+               <span class="glyphicon glyphicon-play"></span> Run
+               </button>
+               <div id="editor">
+               </div>
+            </div>
+            <div class="right" class="ui-widget-content" id="right">
+               <div id="hilarious">
+                  <p>> learn_js_good start</p>
+                  <p>...</p>
+                  <p>...</p>
+                  <p>...</p>
+                  <p>done.</p>
+               </div>
+               <p id="console"></p>
+               <p id="prompt">> _</p>
+            </div>
+         </div>
+      </div>
+      <!-- jquery -->
+      <script src="../js/lib/jquery-3.1.1.min.js"></script>
+      <script src="../js/lib/jquery-ui.js"></script>
+      <!-- bootstrap -->
+      <script src="../js/lib/bootstrap.min.js"></script>
+      <!-- ace editor -->
+      <script src="../js/ace/ace.js"></script>
+      <!-- ts compiler -->
+      <script src="../ts/typescript.js"></script>
+      <!-- app js -->
+      <script src="../js/app.js"></script>
+      <!-- main js -->
+      <script src="./main.js"></script>
+      <!-- code samples -->
+      <script src="./chapters.js"></script>
+      <!-- syntax highlighting outside ace editor -->
+      <script src="../js/lib/highlight/highlight.pack.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script>
+   </body>
+</html>
