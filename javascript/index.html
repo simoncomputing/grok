@@ -37,7 +37,8 @@
                      </div>
                      <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                         <div class="panel-body">
-                           <p>Javascript is one of the world’s most popular programming languages. In the early days of the web, the language was used to create simple scripts that did handy things, like check to make sure you filled out all the “required” fields on a form before you hit submit. But as Internet connections got faster and browsers got more sophisticated, Javascript evolved into a tool for building all sorts of complex web-based apps. Some, like Google Docs, even rival desktop apps in size and functionality.</p>
+                           <h3>Intro</h3>
+                           <p>Javascript is one of the world’s most popular programming languages. In the early days of the web, the language was used to create simple scripts that did handy things, like check to make sure you filled out all the "required" fields on a form before you hit submit. But as Internet connections got faster and browsers got more sophisticated, Javascript evolved into a tool for building all sorts of complex web-based apps. Some, like Google Docs, even rival desktop apps in size and functionality.</p>
                            <p>Javascript is a high-level, dynamic, untyped, and interpreted programming language. JavaScript can be an eloquent language if written the right way, but in the hand’s of a bad programmer, JavaScript can be ugly and error prone. This tutorial will not only teach you the syntax and semantics of the language, but also instill proper coding principles. </p>
                            <p>This tutorial assumes that you have prior object oriented programming experience in a language such as Java, C++, etc.</p>
                            <button id="ch0" class="btn btn-default btn-block btn-primary" style="margin-bottom: 8px;">Load code covering all JS features</button>
@@ -128,7 +129,7 @@ function doSomething() {
                      <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                         <div class="panel-body">
                            <button id="ch3" class="btn btn-default btn-block btn-primary" style="margin-bottom: 8px;">Load code for this chapter in the editor</button>
-                           <p>Think of an object as a collection of things. For example, imagine you have a ship. That ship is your object and contains a collection of other things. We’ll call these “properties”. The ship’s properties might contain the year it was built, the name of the ships captain, the number of passengers aboard, etc.  Functions and other objects and be properties as well.</p>
+                           <p>Think of an object as a collection of things. For example, imagine you have a ship. That ship is your object and contains a collection of other things. We’ll call these "properties". The ship’s properties might contain the year it was built, the name of the ships captain, the number of passengers aboard, etc.  Functions and other objects and be properties as well.</p>
                            <p>Taken from the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects">MDN</a>:</p>
                            <blockquote>JavaScript is designed on a simple object-based paradigm. An object is a collection of properties, and a property is an association between a name and a value. A property's value can be a function, in which case the property is known as a method. In addition to objects that are predefined in the browser, you can define your own objects.</blockquote>
                            <p>You can define an object using literal syntax like this:</p>
@@ -178,7 +179,7 @@ bag.forEach(yell);</code></pre>
                         </div>
                      </div>
                   </div>
-                  <div class="panel panel-default">
+<!--                   <div class="panel panel-default">
                      <div class="panel-heading" role="tab" id="headingSix">
                         <h4 class="panel-title">
                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
@@ -193,18 +194,75 @@ bag.forEach(yell);</code></pre>
                         </div>
                      </div>
                   </div>
-                  <div class="panel panel-default">
+ -->                  <div class="panel panel-default">
                      <div class="panel-heading" role="tab" id="headingSeven">
                         <h4 class="panel-title">
                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                           Advanced Topics
+                           Advanced
                            </a>
                         </h4>
                      </div>
                      <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
                         <div class="panel-body">
                             <button id="ch6" class="btn btn-default btn-block btn-primary" style="margin-bottom: 8px;">Load code for this chapter in the editor</button>
-                             
+                             <p>Things can get pretty tricky in JavaScript, so we are going to go over some more advanced features in depth. Carefully go throguh the code in this chapter, and make sure that you have a full understanding of what is going on.<p>
+                             <h3>Equality</h3>
+                             <p>The == operator will compare for equality, <i>but will apply any necessary type conversions first.</i></p>
+                             <p>The === operator will not do any conversions, and returns false if the two operands are not the same type.</p>
+                             <p>So if a string and a number are being compared using ==, the string will be converted to a number and then compared. Check out the following code:</p>
+                             <pre><code class="js">if (4 == "4") {
+  var sameAs = (4 === parseInt("4"));
+  console.log(sameAs);
+}</pre></code>
+                             <p>There are many different rules for comparing different types and they are laid out in the <a href="https://i.stack.imgur.com/35MpY.png">specification.</a> Unless you know exactly how you are using the ==, always use the === instead</p>
+                             <h3>Functions</h3>
+                             <p>It is possible to immediately invoke a function. The function name is declared within its own scope, so it cannot be called later in the program.</p>
+                             <pre><code class="js">(function (){
+  console.log("first");
+}());
+
+console.log("second");</code></pre>
+                            <p>Immediatlely invoked functions are important because they do not pollute the global namespace. Many librarys use this technique so that their code does not cause global variable conflicts.</p>
+                             <p>You can assign the result to a variable, but still do not expect to call the function later.</p>
+                            <pre><code class="js">var result = function add(a, b){
+  return a + b;
+}(3, 4);
+
+console.log(result); // 7
+add();  // Error</code></pre>
+                             <p>If you recall in some of the previous chapters, we passed in already defined functions as parameters. Well, you can actually define the function as an argument and use it on the fly. You'll see this come up often in other Javascript code.</p>
+                            <pre><code class="js">var nums = [1, 2, 3];
+function square(val) {
+  return val * val;
+}
+
+/* old way */
+var squared1 = nums.map(square);
+
+/* function declared inline */
+var squared2 = nums.map(function(n) {
+  return n * n;
+});
+
+console.log(squared1.toString());
+console.log(squared1.toString());</code></pre>  
+                             <h3>Closures</h3>
+                             <p></p>
+                             <p>Closures are a complicated beast to explain, so I am going to the experts and stackoverflow handle this one. <a href="http://stackoverflow.com/questions/111102/how-do-javascript-closures-work">This post</a> does a fantastic job of explaining closures. The code in that post is the same code that you can play with here.</p>
+                             <p>Below is another example covering closures in a basic sense.</p>
+                             <pre><code class="js">function counter() {
+    var count = 0;
+    return function() {
+        console.log(count++);
+    }
+}
+var juan = {}, tew = {};
+juan.count = counter();
+tew.count = counter();
+juan.count(); // "0"
+juan.count(); // "1"
+tew.count(); // "0"
+tew.count(); // "1"</code></pre>
                         </div>
                      </div>
                   </div>
