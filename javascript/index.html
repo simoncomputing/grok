@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>SimonComputing | Grok.TypeScript()</title>
+      <title>Grok | JavaScript</title>
       <link rel="stylesheet" href="../css/normalize.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
       <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -38,7 +38,7 @@
                      <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                         <div class="panel-body">
                            <h3>Intro</h3>
-                           <p>Javascript is one of the world’s most popular programming languages. In the early days of the web, the language was used to create simple scripts that did handy things, like check to make sure you filled out all the "required" fields on a form before you hit submit. But as Internet connections got faster and browsers got more sophisticated, Javascript evolved into a tool for building all sorts of complex web-based apps. Some, like Google Docs, even rival desktop apps in size and functionality.</p>
+                           <p>Javascript is one of the world’s most popular programming languages. In the early days of the web, the language was used to create simple scripts that did handy things, like check to make sure you filled out all the "required" fields on a form. As Internet connections got faster and browsers got more sophisticated, Javascript evolved into a tool for building all sorts of complex web-based apps. Some rival desktop apps in size / functionality.</p>
                            <p>Javascript is a high-level, dynamic, untyped, and interpreted programming language. JavaScript can be an eloquent language if written the right way, but in the hand’s of a bad programmer, JavaScript can be ugly and error prone. This tutorial will not only teach you the syntax and semantics of the language, but also instill proper coding principles. </p>
                            <p>This tutorial assumes that you have prior object oriented programming experience in a language such as Java, C++, etc.</p>
                            <button id="ch0" class="btn btn-default btn-block btn-primary" style="margin-bottom: 8px;">Load code covering all JS features</button>
@@ -72,7 +72,7 @@ juan = true;</code></pre>
                               <li>Object</li>
                               <li>Symbol (new in ES6)</li>
                            </ul>
-                           ... oh, and undefined and null, which are ... slightly odd. And Array, which is a special kind of object. And Date and RegExp, which are objects that you get for free. And to be technically accurate, functions are just a special type of object. So the type diagram looks more like this:
+                           But some special objects are included too. Array, Data, and RegExp are kinds of objects that do what you'd expect. Also, technically speaking, Functions are just a special kind of Object. And I can't leave out null and undefined, whose difference is spelled out in the example code. So the types you start with looks more like this:
                            <ul>
                               <li>Number</li>
                               <li>String</li>
@@ -102,8 +102,8 @@ juan = true;</code></pre>
                      <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                         <div class="panel-body">
                            <button id="ch2" class="btn btn-default btn-block btn-primary" style="margin-bottom: 8px;">Load code for this chapter in the editor</button>
-                           <p>In JavaScript, functions are first-class objects, because they can have properties and methods just like any other object. What distinguishes them from other objects is that functions can be called. Functions can get pretty tricky. For now we will go over the fundamentals and cover more advanced topics later. </p>
-                           <p>Functions can be defined one of two ways</p>
+                           <p>In JavaScript, functions are objects, meaning they can have properties and methods just like any other object. What distinguishes them from other objects is that functions can be called. Functions can get pretty tricky. For now we will go over the fundamentals and cover more advanced topics later. </p>
+                           <p>Functions can be declared one of two ways</p>
 <pre><code class="js">var doSomething = function() {
   . . . 
 }
