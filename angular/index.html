@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>SimonComputing | Grok.Angular()</title>
+      <title>Grok | Angular</title>
       <link rel="stylesheet" href="../css/normalize.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
       <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
       <link href="https://fonts.googleapis.com/css?family=Proza+Libre|Roboto" rel="stylesheet">
-      <link rel="stylesheet" href="./grok-angular.css">
+      <link rel="stylesheet" href="../css/app.css">
+      <link rel="stylesheet" href="./main.css">
       <link rel="stylesheet" href="../js/lib/highlight/styles/tomorrow.css">
       <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
@@ -15,37 +16,326 @@
       <div class="c">
          <div class="top">
             <div class="container-fluid" style="text-align: center;">
-                <a class="home-ico pull-left" href="/">
-                  <span class="glyphicon glyphicon-home" style="width: 44px; height: 44px;"></span>
-                </a>
-                <a href="http://SimonComputing.com">
-                  <img class="img img-logo pull-right" src="../img/sc-logo-white.png">
-                </a>
-                <h1><span style="font-family: 'Baloo', cursive; ">Grok</span><span style="font-family: 'Inconsolata', monospace; ">.Angular()</span></h1>
+               <a class="home-ico pull-left" href="/">
+               <span class="glyphicon glyphicon-home" style="width: 44px; height: 44px;"></span>
+               </a>
+               <a href="http://SimonComputing.com">
+               <img class="img img-logo pull-right" src="../img/sc-logo-white.png">
+               </a>
+               <h1><span style="font-family: 'Baloo', cursive; ">Grok</span><span style="font-family: 'Inconsolata', monospace; ">.Angular()</span></h1>
             </div>
          </div>
          <div class="bottom" id="bottom">
             <div class="left" id="left">
+               <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                           <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                           Overview
+                           </a>
+                        </h4>
+                     </div>
+                     <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                           <h3>Intro</h3>
+                           <p>Javascript is one of the world’s most popular programming languages. In the early days of the web, the language was used to create simple scripts that did handy things, like check to make sure you filled out all the "required" fields on a form. As Internet connections got faster and browsers got more sophisticated, Javascript evolved into a tool for building all sorts of complex web-based apps. Some rival desktop apps in size / functionality.</p>
+                           <p>Javascript is a high-level, dynamic, untyped, and interpreted programming language. JavaScript can be an eloquent language if written the right way, but in the hand’s of a bad programmer, JavaScript can be ugly and error prone. This tutorial will not only teach you the syntax and semantics of the language, but also instill proper coding principles. </p>
+                           <p>This tutorial assumes that you have prior object oriented programming experience in a language such as Java, C++, etc.</p>
+                           <button id="ch0" class="btn btn-default btn-block btn-primary" style="margin-bottom: 8px;">Load code covering all JS features</button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                           <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                           Vars  
+                           </a>
+                        </h4>
+                     </div>
+                     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                           <button id="ch1" class="btn btn-default btn-block btn-primary" style="margin-bottom: 8px;">Load code for this chapter in the editor</button>
+                           <p>Variables, the core of all programming languages, are where we will begin. Traditionally the programmer must declare the type of variable, but in JavaScript this is not the case. JavaScript is a weakly typed language; i.e. the type is inferred. It is also dynamically typed, so a variable’s type can change.</p>
+<pre><code class="js">var juan = 1;
+juan = "one";
+juan = [];
+juan = { };
+juan = true;</code></pre>
+                           <p>These are all legal expressions. In JavaScript you can change a variables type on the fly no questions asked. This is obviously to be avoided, as it leaves future code maintainers scratching their heads wondering what you were thinking. </p>
+                           <p>The basic types are as follows:</p>
+                           <ul>
+                              <li>Number</li>
+                              <li>String</li>
+                              <li>Boolean</li>
+                              <li>Function</li>
+                              <li>Object</li>
+                              <li>Symbol (new in ES6)</li>
+                           </ul>
+                           But some special objects are included too. Array, Data, and RegExp are kinds of objects that do what you'd expect. Also, technically speaking, Functions are just a special kind of Object. And I can't leave out null and undefined, whose difference is spelled out in the example code. So the types you start with looks more like this:
+                           <ul>
+                              <li>Number</li>
+                              <li>String</li>
+                              <li>Boolean</li>
+                              <li>Symbol (new in ES6)</li>
+                              <li>Object</li>
+                              <ul>
+                                 <li>Function</li>
+                                 <li>Array</li>
+                                 <li>Date</li>
+                                 <li>RegExp</li>
+                              </ul>
+                              <li>null</li>
+                              <li>undefined</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                           <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                           Functions
+                           </a>
+                        </h4>
+                     </div>
+                     <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                           <button id="ch2" class="btn btn-default btn-block btn-primary" style="margin-bottom: 8px;">Load code for this chapter in the editor</button>
+                           <p>In JavaScript, functions are objects, meaning they can have properties and methods just like any other object. What distinguishes them from other objects is that functions can be called. Functions can get pretty tricky. For now we will go over the fundamentals and cover more advanced topics later. </p>
+                           <p>Functions can be declared one of two ways</p>
+<pre><code class="js">var doSomething = function() {
+  . . . 
+}
 
+/* is the same as */
 
+function doSomething() {
+  . . . 
+}</code></pre>
+                        <p>The difference being is that functions declared the second way is "hoisted", meaning, the Javascript engine reads all these declarations first before executing any of the rest of the code. The declaration statement stands alone, and cannot be combined with other expressions. Play with the first example in the code to gain understanding.</p>
+                        </div>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="headingFour">
+                        <h4 class="panel-title">
+                           <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                           Objects
+                           </a>
+                        </h4>
+                     </div>
+                     <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                        <div class="panel-body">
+                           <button id="ch3" class="btn btn-default btn-block btn-primary" style="margin-bottom: 8px;">Load code for this chapter in the editor</button>
+                           <p>Think of an object as a collection of things. For example, imagine you have a ship. That ship is your object and contains a collection of other things. We’ll call these "properties". The ship’s properties might contain the year it was built, the name of the ships captain, the number of passengers aboard, etc.  Functions and other objects and be properties as well.</p>
+                           <p>Taken from the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects">MDN</a>:</p>
+                           <blockquote>JavaScript is designed on a simple object-based paradigm. An object is a collection of properties, and a property is an association between a name and a value. A property's value can be a function, in which case the property is known as a method. In addition to objects that are predefined in the browser, you can define your own objects.</blockquote>
+                           <p>You can define an object using literal syntax like this:</p>
+<pre><code class="js">var titanic = {
+  maidenVoyage: 1912,
+  numberOfPassengers: 1317,
+  captain: {
+    name: "Edward John Smith"
+  },
+  sendSOS: function() {
+    console.log("SAVE OUR SHIP")
+  }
+}</code></pre>
+                           <p>You can access those properties like this:</p>
+<pre><code class="js">titanic.maidenVoyage // 1912
+titanic["numberOfPassengers"] // 1317
+</code></pre>
+                          <p>This may look weird to you, but you can think of JavaScript objects as a hash map with the property names being the keys.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="headingFive">
+                        <h4 class="panel-title">
+                           <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                           Arrays
+                           </a>
+                        </h4>
+                     </div>
+                     <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                        <div class="panel-body">
+                           <button id="ch4" class="btn btn-default btn-block btn-primary" style="margin-bottom: 8px;">Load code for this chapter in the editor</button>
+                           <p>Arrays are a little different then they are in Java and C++. Arrays in JavaScript can grow and shrink and there are many helper methods provided for you. Take a look at the following code snippet for a quick example.</p>
+                           <pre><code class="js">var bag = ["cola", "sandwich", "cake"] </code></pre>
+                           <p>Don’t forget, JavaScript is weakly typed, so the following is legal code. </p>
+                           <pre><code class="js">var trash = ["garbage", 10, true, { name: "Jack", hours: 24 } ] </code></pre>
+                           <p>The forEach method is extremely helpful for iterating through an array.</p>
+<pre><code class="js">bag.forEach(function(item){
+    console.log(("i love " + item).toUpperCase());
+});</code></pre>          
+                           <p>or even</p>
+<pre><code class="js">function yell(item) {
+    console.log(("i love " + item).toUpperCase()); 
+}
 
+bag.forEach(yell);</code></pre> 
+                        </div>
+                     </div>
+                  </div>
+<!--                   <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="headingSix">
+                        <h4 class="panel-title">
+                           <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            Browser
+                           </a>
+                        </h4>
+                     </div>
+                     <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                        <div class="panel-body">
+                           <button id="ch5" class="btn btn-default btn-block btn-primary" style="margin-bottom: 8px;">Load code for this chapter in the editor</button>
+                            <p>Javascript is the language that modern day browsers speak, so a tutorial without a section on the browser would be incomplete! This section details how Javascript is used in conjunction with the other web standards HTML & CSS. We will go over the basics of DOM manipulation using JS. You could think of this as a miniature web app tutorial. </p> 
+                        </div>
+                     </div>
+                  </div>
+ -->                  <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="headingSeven">
+                        <h4 class="panel-title">
+                           <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                           Advanced
+                           </a>
+                        </h4>
+                     </div>
+                     <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                        <div class="panel-body">
+                            <button id="ch6" class="btn btn-default btn-block btn-primary" style="margin-bottom: 8px;">Load code for this chapter in the editor</button>
+                             <p>Things can get pretty tricky in JavaScript, so we are going to go over some more advanced features in depth. Carefully go throguh the code in this chapter, and make sure that you have a full understanding of what is going on.<p>
+                             <h3>Equality</h3>
+                             <p>The == operator will compare for equality, <i>but will apply any necessary type conversions first.</i></p>
+                             <p>The === operator will not do any conversions, and returns false if the two operands are not the same type.</p>
+                             <p>So if a string and a number are being compared using ==, the string will be converted to a number and then compared. Check out the following code:</p>
+                             <pre><code class="js">if (4 == "4") {
+  var sameAs = (4 === parseInt("4"));
+  console.log(sameAs);
+}</pre></code>
+                             <p>There are many different rules for comparing different types and they are laid out in the <a href="https://i.stack.imgur.com/35MpY.png">specification.</a> Unless you know exactly how you are using the ==, always use the === instead</p>
+                             <h3>Functions</h3>
+                             <p>It is possible to immediately invoke a function. The function name is declared within its own scope, so it cannot be called later in the program.</p>
+                             <pre><code class="js">(function (){
+  console.log("first");
+}());
 
+console.log("second");</code></pre>
+                            <p>Immediatlely invoked functions are important because they do not pollute the global namespace. Many librarys use this technique so that their code does not cause global variable conflicts.</p>
+                             <p>You can assign the result to a variable, but still do not expect to call the function later.</p>
+                            <pre><code class="js">var result = function add(a, b){
+  return a + b;
+}(3, 4);
+
+console.log(result); // 7
+add();  // Error</code></pre>
+                             <p>If you recall in some of the previous chapters, we passed in already defined functions as parameters. Well, you can actually define the function as an argument and use it on the fly. You'll see this come up often in other Javascript code.</p>
+                            <pre><code class="js">var nums = [1, 2, 3];
+function square(val) {
+  return val * val;
+}
+
+/* old way */
+var squared1 = nums.map(square);
+
+/* function declared inline */
+var squared2 = nums.map(function(n) {
+  return n * n;
+});
+
+console.log(squared1.toString());
+console.log(squared1.toString());</code></pre>  
+                             <h3>Closures</h3>
+                             <p></p>
+                             <p>Closures are a complicated beast to explain, so I am going to the experts and stackoverflow handle this one. <a href="http://stackoverflow.com/questions/111102/how-do-javascript-closures-work">This post</a> does a fantastic job of explaining closures. The code in that post is the same code that you can play with here.</p>
+                             <p>Below is another example covering closures in a basic sense.</p>
+                             <pre><code class="js">function counter() {
+    var count = 0;
+    return function() {
+        console.log(count++);
+    }
+}
+var juan = {}, tew = {};
+juan.count = counter();
+tew.count = counter();
+juan.count(); // "0"
+juan.count(); // "1"
+tew.count(); // "0"
+tew.count(); // "1"</code></pre>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="headingEight">
+                        <h4 class="panel-title">
+                           <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                           ES6
+                           </a>
+                        </h4>
+                     </div>
+                     <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                        <div class="panel-body">
+                            <button id="ch7" class="btn btn-default btn-block btn-primary" style="margin-bottom: 8px;">Load code for this chapter in the editor</button>
+                            <p> <a href="https://en.wikipedia.org/wiki/ECMAScript">ECMAScript (ES)</a> is the standard that JavaScript is based on. JavaScript starts out with ES and provides additional features. ES is important to the history of JavaScript and you can read more about it on its wikipedia page. The latest release of ES is ES6. We will highlight the important new features. </p>
+                            
+                            <h4>let & const</h4>
+                            <p>We have already talked about <span style="color: #8959a8">let</span> so we will focus on <span style="color: #8959a8">const</span>. <span style="color: #8959a8">const</span> allows you to declare variables immutable i.e. a constant. 
+                            <pre><code class="ts">const max_width = 10;
+max_width       = 20;    // Error</code></pre>
+                            <h4>Arrow function</h4>
+                            <p>Old</p>
+                            <pre><code class="js">doThing(true, function(d) {
+    . . . 
+});</code></pre>
+                            <p>New</p>
+                            <pre><code class="ts">doThing(true, d => {
+    . . .                             
+});
+                            </code></pre>
+                            <p>This is arguably the most important change introduced in ES6. The arrow function <span style="color: #8959a8">=></span> allows you to retain scope when working inside a function. Normally the <span style="color: #8959a8">this</span> keyword refers to the function it is in. However, when using the arrow function, the <span style="color: #8959a8">this</span> keyword refers to object that owns the function. Basically, when using the arrow function, the <span style="color: #8959a8">this</span> keyword operates like you would expect it to in OOD.</p>
+                            <p>Take a look at the example code</p>
+                            <h4>Parameters</h4>
+                            <p>ES6 has introduced additional features to function parameters</p>
+                            <p>You can now set default parameter values<p>
+                            <pre><code class="ts">function f (x, y = 7, z = 42) {
+    return x + y + z
+}
+f(1) === 50
+</code></pre>
+                           <p>You can aggregate remaining arguments into an array</p>
+                           <pre><code class="ts">function f (x, y, ...a) {
+    return (x + y) * a.length
+}
+f(1, 2, "hello", true, 7) === 9
+</code></pre>
+                           <p>Finally, when specifying the ... in the actualy call, you can "spread" an array into multiple parameters</p>
+                           <pre><code class="ts">function f(x, y, z) {
+  return x + y + z;
+}
+// Pass each elem of array as argument
+f(...[1,2,3]) == 6
+</code></pre>
+                           </div>
+                     </div>
+                  </div>
+               </div>
             </div>
             <div class="middle" class="ui-widget-content" id="middle">
                <button class="btn btn-warning" id="run">
-                  <span class="glyphicon glyphicon-play"></span> Run
+               <span class="glyphicon glyphicon-play"></span> Run
                </button>
                <div id="editor">
                </div>
             </div>
-            <div class="right" class="ui-widget-content" id="right" style="background-color: white;">
-              <div class="embed-responsive embed-responsive-16by9" style="width: 100%; height: 100%">
-                <iframe class="embed-responsive-item" id="iPreview" ></iframe>
+            <div class="right" class="ui-widget-content" id="right">
+              <div class="embed-responsive embed-responsive-4by3 iframe-container">
+                <iframe class="embed-responsive-item" id="iPreview"></iframe>
               </div>
             </div>
          </div>
       </div>
-
       <!-- jquery -->
       <script src="../js/lib/jquery-3.1.1.min.js"></script>
       <script src="../js/lib/jquery-ui.js"></script>
@@ -56,28 +346,13 @@
       <!-- ts compiler -->
       <script src="../ts/typescript.js"></script>
       <!-- app js -->
-      <script src="../js/app/main.js"></script>
+      <script src="../js/app.js"></script>
+      <!-- main js -->
+      <script src="./main.js"></script>
       <!-- code samples -->
-      <script src="../js/app/samples.js"></script>
-      <!-- quote gen -->
-      <script src="../js/app/inspiration.js"></script>
+      <script src="./chapters.js"></script>
       <!-- syntax highlighting outside ace editor -->
       <script src="../js/lib/highlight/highlight.pack.js"></script>
       <script>hljs.initHighlightingOnLoad();</script>
-            <script type="text/javascript">
-        
-var myVariable = '<!DOCTYPE html>\n<html>\n    <script src=\"https:\/\/unpkg.com\/core-js\/client\/shim.min.js\"><\/script>\n\n    <script src=\"https:\/\/unpkg.com\/zone.js@0.6.25?main=browser\"><\/script>\n    <script src=\"https:\/\/unpkg.com\/reflect-metadata@0.1.3\"><\/script>\n    <script src=\"https:\/\/unpkg.com\/systemjs@0.19.27\/dist\/system.src.js\"><\/script>\n\n   <style>\n      #myContainer {\n        width: 400px;\n        height: 400px;\n        position: relative;\n        background: firebrick;\n        border-radius: 25px;\n      }\n      #myAnimation {\n        width: 50px;\n        height: 50px;\n        position: absolute;\n        background-color: white;\n        border-radius: 25px;\n        top: -1px;\n        left: -1px;\n      }\n   <\/style>\n   <!'+'-- Load any external files you like, CSS, JS, etc. --'+'>\n    <link rel=\"stylesheet\" \n    href=\"https:\/\/maxcdn.bootstrapcdn.com\/bootstrap\/3.3.7\/css\/bootstrap.min.css\"> \n    \n   <body>\n      <p>\n         <button class=\"btn btn-default\" onclick=\"myMove()\">Click Me<\/button>\n      <\/p>\n      <div id =\"myContainer\">\n         <div id =\"myAnimation\"><\/div>\n      <\/div>\n      \n      <script>\n         function myMove() {\n           var elem = document.getElementById(\"myAnimation\");\n           var pos = 0;\n           var id = setInterval(frame, 10);\n           function frame() {\n             if (pos == 352) {\n               clearInterval(id);\n             } else {\n               pos++;\n               elem.style.top = pos - 1 + \'px\';\n               elem.style.left = pos - 1 + \'px\';\n             }\n           }\n         }\n      <\/script>\n      \n      <!'+'-- TypeScript works too! --'+'>\n      <script type=\"text\/typescript\">\n            class Hello { \n                name: string; \n                gold: number; \n                \n                wha() { \n                    this.name = \'Mack\'; \n                } \n            } \n            \n            let greeting = new Hello(); \n            greeting.wha(); \n            document.writeln(\'<br><h3>Hello, \' + greeting.name + \'!<\/h3>\');\n      <\/script>\n   <\/body>\n<\/html>';
-
-        editor.setValue(myVariable, -1);
-
-
-            var content = editor.getValue();
-             var el = document.createElement('html');
-             el.innerHTML = content;
-
-          document.getElementById('iPreview').src = "data:text/html;charset=utf-8," + escape(el.innerHTML);
-
-
-      </script>
    </body>
 </html>
