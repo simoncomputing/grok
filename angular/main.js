@@ -4,10 +4,16 @@ var editor = ace.edit("editor");
 editor.$blockScrolling = Infinity;
 editor.session.setOption("useWorker", false)
 editor.setTheme("ace/theme/tomorrow");
-editor.getSession().setMode("ace/mode/typescript");
+editor.getSession().setMode("ace/mode/html");
 
 var ch0 = '<!DOCTYPE html>\n<html>\n   <style>\n      #myContainer {\n        width: 400px;\n        height: 400px;\n        position: relative;\n        background: firebrick;\n        border-radius: 25px;\n      }\n      #myAnimation {\n        width: 50px;\n        height: 50px;\n        position: absolute;\n        background-color: white;\n        border-radius: 25px;\n        top: -1px;\n        left: -1px;\n      }\n   <\/style>\n   <!'+'-- Load any external files you like, CSS, JS, etc. --'+'>\n    <link rel=\"stylesheet\" \n    href=\"https:\/\/maxcdn.bootstrapcdn.com\/bootstrap\/3.3.7\/css\/bootstrap.min.css\"> \n    \n   <body>\n      <p>\n         <button class=\"btn btn-default\" onclick=\"myMove()\">Click Me<\/button>\n      <\/p>\n      <div id =\"myContainer\">\n         <div id =\"myAnimation\"><\/div>\n      <\/div>\n      \n      <script>\n         function myMove() {\n           var elem = document.getElementById(\"myAnimation\");\n           var pos = 0;\n           var id = setInterval(frame, 10);\n           function frame() {\n             if (pos == 352) {\n               clearInterval(id);\n             } else {\n               pos++;\n               elem.style.top = pos - 1 + \'px\';\n               elem.style.left = pos - 1 + \'px\';\n             }\n           }\n         }\n      <\/script>\n      \n      <!'+'-- TypeScript works too! --'+'>\n      <script type=\"text\/typescript\">\n            class Hello { \n                name: string; \n                gold: number; \n                \n                wha() { \n                    this.name = \'Mack\'; \n                } \n            } \n            \n            let greeting = new Hello(); \n            greeting.wha(); \n            document.writeln(\'<br><h3>Hello, \' + greeting.name + \'!<\/h3>\');\n      <\/script>\n   <\/body>\n<\/html>';
 editor.setValue(ch0, -1);
+
+/* set up iFrame stuff */
+
+var eyeFrame = sandbox.create();
+sandbox.target.append(eyeFrame);
+sandbox.use(eyeFrame);
 
 trigger();
 
@@ -21,14 +27,24 @@ $(document).keydown(function(event) {
     }
 });
 
-/* !! Set HTML of iFrame !! */
+/* triggerrr */
 
 function trigger(event) {
-    var content = editor.getValue();
-    var el = document.createElement('html');
-    el.innerHTML = content;
-    document.getElementById('iPreview').src = "data:text/html;charset=utf-8," + escape(el.innerHTML);
+
+    var iframe = sandbox.create();
+    sandbox.use(iframe, function () {
+      var childDoc = iframe.contentDocument,
+          childWindow = getIframeWindow(iframe);
+      if (!childDoc) childDoc = childWindow.document;
+
+      childDoc.open();
+      childDoc.write('');
+      childDoc.write(editor.getValue());
+      childDoc.close();
+
+    });
 };
+
 
 
 /* !! compile TypeScript !! */
