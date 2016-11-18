@@ -103,20 +103,20 @@ $('.ui-resizable-e').click(function() {
 /* fixes bug where iframe messes with mouse events */
 
 $('.ui-resizable-e').mousedown(function() {
-    $('#iPreview').css('pointer-events', 'none');
+    $('iframe').css('pointer-events', 'none');
 });
 
 
 $('.ui-resizable-e').mouseup(function() {
-    $('#iPreview').css('pointer-events', 'all');
+    $('iframe').css('pointer-events', 'all');
 });
 
 $('.ui-resizable-w').mousedown(function() {
-    $('#iPreview').css('pointer-events', 'none');
+    $('iframe').css('pointer-events', 'none');
 });
 
 
 $('.ui-resizable-w').mouseup(function() {
-    $('#iPreview').css('pointer-events', 'all');
+    $('iframe').css('pointer-events', 'all');
 });
 
