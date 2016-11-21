@@ -14,6 +14,7 @@ function hackXHR() {
 	var rawOpen = XMLHttpRequest.prototype.open;
 
 	XMLHttpRequest.prototype.open = function() {
+			console.log('a');
 		if (!this._hooked) {
 			this._hooked = true;
 			setupHook(this);
@@ -23,11 +24,11 @@ function hackXHR() {
 }
 
 
-var contentForUrl = function(url) {
+function contentForUrl(url) {
 
 	var a = document.createElement('a');
-	a.href = 'http://www.example.com:123/foo/bar.html?fox=trot#foo';
-	console.log('aye');
+	a.href = url;
+	return files[a["pathname"]];
 
 }
 
@@ -51,7 +52,7 @@ function setupHook(xhr) {
 	}
 
   	function getStat() {
-  		// nothing to see here
+  		/* nothing to see here */
     	return 200;
   	}
 

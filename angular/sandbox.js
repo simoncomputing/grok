@@ -28,13 +28,10 @@ var sandbox = (function () {
     sandbox.old = sandbox.active;
     sandbox.active = iframe;
     prependChild(sandbox.target, iframe);
-    // setTimeout allows the iframe to be rendered before other code runs,
-    // allowing us access to the calculated properties like innerWidth.
+
     setTimeout(function () {
-      // call the code that renders the iframe source
       if (done) done();
 
-      // remove *all* the iframes, baring the active one
       var iframes = sandbox.target.getElementsByTagName('iframe'),
           length = iframes.length,
           i = 0,
