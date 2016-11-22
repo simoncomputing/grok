@@ -46,7 +46,6 @@ function setupHook(xhr) {
 
 		if(xhr.responseURL) {	
 			var match;
-			/* bah bop bop bop baaahhhh, I'm lovin' it */
 			ret = (match = contentForUrl(xhr.responseURL)) ? match : ret;
 		}
 
