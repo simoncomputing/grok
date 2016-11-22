@@ -11,10 +11,11 @@ var buildCh1 = function() {
 // etc.
 
 function hackXHR() {
+	
 	var rawOpen = XMLHttpRequest.prototype.open;
 
 	XMLHttpRequest.prototype.open = function() {
-			console.log('a');
+
 		if (!this._hooked) {
 			this._hooked = true;
 			setupHook(this);
@@ -28,6 +29,7 @@ function contentForUrl(url) {
 
 	var a = document.createElement('a');
 	a.href = url;
+
 	return files[a["pathname"]];
 
 }
