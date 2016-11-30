@@ -98,10 +98,9 @@ function transpileModule(input, options) {
 
     allDiagnostics.forEach(function(diagnostic) {
         if (diagnostic.start != null) {
-            var {
-                line,
-                character
-            } = diagnostic.file.getLineAndCharacterOfPosition(diagnostic.start);
+            var pos = diagnostic.file.getLineAndCharacterOfPosition(diagnostic.start);
+            var line = pos.line, character = pos.character;
+            
             var message = ts.flattenDiagnosticMessageText(diagnostic.messageText, '\n');
 
             if (!message.includes('console') && !message.includes('NaN') && !message.includes('document') &&
