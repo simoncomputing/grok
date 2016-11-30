@@ -21,6 +21,7 @@ svg {
     font-size: 72px;
     margin-bottom: 0px;
     margin-top: 0px;
+    display: inline;
 }
 
 .little {
