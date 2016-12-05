@@ -27,7 +27,7 @@ function trigger(event) {
 
     var output = transpileModule(editor.getValue(), {
         module: ts.ModuleKind.AMD,
-        target: "ES6",
+        target: "ES5",
         noLib: false
     });
 
