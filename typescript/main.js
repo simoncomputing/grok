@@ -106,7 +106,7 @@ function transpileModule(input, options) {
     let allDiagnostics = ts.getPreEmitDiagnostics(program).concat(emitResult.diagnostics);
     let annotations = [];
 
-    allDiagnostics.forEach(diagnostic => {
+    allDiagnostics.forEach(function(diagnostic) {
 
         if (diagnostic.start != null) {
             let {
